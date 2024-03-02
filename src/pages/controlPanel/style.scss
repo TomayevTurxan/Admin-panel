@@ -1,0 +1,299 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin line {
+  border-bottom: 0.5px solid rgba(8, 3, 5, 0.1);
+}
+@mixin factor-statistic {
+  content: "";
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+}
+@mixin h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+@mixin head-style {
+  background-color: white;
+  padding: 20px 10px;
+}
+$base-color: #5c6370;
+//schedule colors
+$human-factor: #6952e0;
+$mechanic-factor: #00de00;
+$physics-factor: #68d8ee;
+$biology-factor: #258cf4;
+
+//controlPanel for input
+.controlPanel {
+  .control-head {
+    width: 100%;
+    .control-head-title {
+      width: 100%;
+      display: flex;
+      background-color: white;
+      padding: 15px 15px;
+      .control-custom {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        width: 70%;
+        span {
+          display: flex;
+          align-items: center;
+          margin-left: 20px;
+          color: #909090;
+          width: 15%;
+          .line {
+            margin-left: -15px;
+            font-size: 16px;
+            position: absolute;
+            color: #909090;
+          }
+        }
+        .notification {
+          @include center;
+          .notification-i {
+            font-size: 25px;
+          }
+        }
+      }
+      .control-profile {
+        width: 30%;
+        display: flex;
+        .control-profile-notfication {
+          @include center;
+          width: 100%;
+          img {
+            width: 10%;
+            height: 100%;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//controlPanel Filtre Buttom
+.controlPanel {
+  .control-head {
+    .control-filtr-button {
+      margin-bottom: 20px;
+      margin-top: 20px;
+      display: flex;
+      padding: 10px 24px 10px 10px;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: white;
+      button {
+        display: flex;
+        padding: 6px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 6px;
+        color: white;
+        background: #080305;
+      }
+    }
+  }
+}
+
+//controlPanel news type
+.controlPanel {
+  .control-head {
+    .news {
+      .news-type {
+        @include head-style();
+        h1 {
+          @include h1;
+          @include line();
+          padding-bottom: 20px;
+        }
+        .schedule {
+          margin-top: 15px;
+          .show-numbers {
+            display: flex;
+            justify-content: space-evenly;
+            color: $base-color;
+            font-size: 8px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 14.484px;
+          }
+          .factors {
+            margin-top: 25px;
+            .factor-item {
+              display: flex;
+              width: 100%;
+              align-items: center;
+              margin-top: 20px;
+              span {
+                color: $base-color;
+                text-align: right;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 175%;
+                width: 12%;
+                margin-right: 10px;
+              }
+            }
+            .itemOne {
+              .factor-statistic {
+                @include factor-statistic();
+                background-color: $human-factor;
+              }
+            }
+            .itemTwo {
+              .factor-statistic {
+                @include factor-statistic();
+                background-color: $mechanic-factor;
+              }
+            }
+            .itemThree {
+              .factor-statistic {
+                @include factor-statistic();
+                background-color: $physics-factor;
+              }
+            }
+            .itemFour {
+              .factor-statistic {
+                @include factor-statistic();
+                background-color: $biology-factor;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Human skeleton
+.controlPanel {
+  .human {
+    @include head-style();
+
+    .human-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include line();
+      padding-bottom: 13px;
+      h1 {
+        @include h1();
+      }
+      button {
+        display: flex;
+        padding: 5px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 4px;
+        border: 1px solid rgba(8, 3, 5, 0.1);
+        background: #fff;
+      }
+    }
+    .human-skeleton {
+      padding: 30px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      .human-body-main {
+        svg {
+          width: 252.375px;
+          height: 700.033px;
+          flex-shrink: 0;
+        }
+      }
+      .human-head {
+        position: absolute;
+        top: 30px;
+        left: 41.5%;
+      }
+      .human-leftArm {
+        position: absolute;
+        top: 164px;
+        right: 21%;
+      }
+      .human-rightArm {
+        position: absolute;
+        top: 164px;
+        left: 21%;
+      }
+      .human-chest {
+        position: absolute;
+        top: 133px;
+        left: 34.5%;
+        z-index: 2;
+      }
+      .human-shoulderLeft {
+        position: absolute;
+        top: 162px;
+        left: 28%;
+      }
+      .human-shoulderRight {
+        position: absolute;
+        top: 162px;
+        right: 28%;
+      }
+      .human-wristLeftOne {
+        position: absolute;
+        top: 280px;
+        left: 20%;
+      }
+      .human-wristLeftTwo {
+        position: absolute;
+        top: 280px;
+        left: 22%;
+      }
+      .human-wristRightOne {
+        position: absolute;
+        top: 280px;
+        right: 22%;
+      }
+      .human-wristRightTwo {
+        position: absolute;
+        top: 280px;
+        right: 20%;
+      }
+    }
+  }
+}
+
+//human charasteristic
+.controlPanel {
+  .control-head {
+    .news-characteristics {
+      @include head-style();
+      margin-bottom: 200px;
+      h1 {
+        @include line();
+        padding-bottom: 20px;
+      }
+      .factors-blog{
+        .factors-box{
+          .box-color{
+            
+          }
+        }
+      }
+    }
+  }
+}
+
+// controlPanel profile items
+a {
+  display: flex;
+  align-items: center;
+  color: #505050;
+  .item-i {
+    margin-right: 10px;
+  }
+}

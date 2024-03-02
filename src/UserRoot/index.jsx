@@ -1,11 +1,25 @@
 import { Outlet } from "react-router-dom"
-import Footer from "../components/Footer"
-
+import Menu from "../pages/menu"
+import { Col, Row } from "antd"
+import "./style.scss"
 const UserRoot = () => {
   return (
     <>
-        <Outlet/>
-        <Footer/>
+    <section className="mainPage">
+      <div className="container">
+      <Row>
+                <Col span={6}>
+                    <Menu/>
+                </Col>
+                <Col span={18}>
+                   <div className="head">
+                     <Outlet/>
+                   </div>
+                </Col>
+
+        </Row>
+      </div>
+    </section>
     </>
   )
 }

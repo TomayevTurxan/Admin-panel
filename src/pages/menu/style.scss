@@ -1,0 +1,57 @@
+@mixin center-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu {
+  border: 1px solid red;
+  padding: 10px 10px;
+  .logoName {
+    h1 {
+      padding: 10px 15px;
+      background-color: #fcfcfc;
+      text-align: center;
+    }
+  }
+  .controlPanel {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    a{
+        width: 100%;
+    }
+    button {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      background-color: #23A4DD!important;
+      color:white;
+      padding: 17px 17px;
+      span {
+        margin-left: 10px;
+      }
+    }
+  }
+  .links {
+    margin-top: 50px;
+    ul {
+      li {
+        margin-bottom: 15px;
+        padding: 10px 15px;
+        // background-color: #23A4DD;
+        border-radius: 5px;
+        a{
+            color:black;
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            span{
+                margin-left: 15px;
+            }
+        }
+      }
+    }
+  }
+}
