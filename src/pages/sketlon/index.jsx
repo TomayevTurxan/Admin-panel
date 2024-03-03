@@ -660,8 +660,7 @@ const Sketlon = () => {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(111.5 46.5) rotate(105.524) scale(9.34077)"
           >
-            <stop stop-color="white" />
-            <stop offset="1" stop-color="white" stop-opacity="0" />
+         
           </radialGradient>
           <radialGradient
             id="paint1_radial_1976_17348"
@@ -671,8 +670,7 @@ const Sketlon = () => {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(142.5 46.5) rotate(121.759) scale(12.3491)"
           >
-            <stop stop-color="white" />
-            <stop offset="1" stop-color="white" stop-opacity="0" />
+           
           </radialGradient>
         </defs>
       </svg>

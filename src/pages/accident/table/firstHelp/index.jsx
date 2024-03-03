@@ -9,7 +9,6 @@ import {
   Space,
   TimePicker,
 } from "antd";
-import { FaAngleRight } from "react-icons/fa";
 import { BsArrowReturnLeft } from "react-icons/bs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
 import { useFormik } from "formik";
@@ -18,15 +17,22 @@ import * as Yup from "yup";
 import "./style.scss";
 
 const FirstHelp = () => {
-  const [selectedAccordion, setSelectedAccordion] = useState(null);
+  const [selected, setSelected] = useState(false);
+  const [noSelected, setNoSelected] = useState(false);
 
+  const handleSelected = () => {
+    setSelected(!selected);
+  };
+  const handleNoSelected = () => {
+    setNoSelected(!noSelected);
+  };
   const initialValues = {
     ad: "",
     baslamaTarixi: null,
     hadiseTarixi: null,
     qeyd: "",
     qerarVerenAdi: "",
-    vezifesi: ""
+    vezifesi: "",
   };
 
   const validationSchema = Yup.object().shape({
@@ -35,7 +41,7 @@ const FirstHelp = () => {
     hadiseTarixi: Yup.date().required("Hadise tarixi is required"),
     qeyd: Yup.string(),
     qerarVerenAdi: Yup.string(),
-    vezifesi: Yup.string()
+    vezifesi: Yup.string(),
   });
   const formik = useFormik({
     initialValues,
@@ -44,13 +50,6 @@ const FirstHelp = () => {
       console.log(values);
     },
   });
-  const toggleAccordion = (sectionKey) => {
-    if (selectedAccordion === sectionKey) {
-      setSelectedAccordion(null);
-    } else {
-      setSelectedAccordion(sectionKey);
-    }
-  };
 
   dayjs.extend(customParseFormat);
   const onChange = (time, timeString) => {
@@ -60,17 +59,19 @@ const FirstHelp = () => {
   return (
     <Form onSubmit={formik.handleSubmit}>
       <div className="first-step">
-        <div className="first-blog" onClick={() => toggleAccordion(1)}>
+        <div className="first-blog">
           <div className="first-box">
-            <Checkbox checked={selectedAccordion === 1}></Checkbox>
+            <Checkbox
+              onChange={handleSelected}
+              disabled={noSelected ? true : false}
+            ></Checkbox>
             <span>Ilk yardim</span>
           </div>
           <BsArrowReturnLeft />
-          <FaAngleRight className={selectedAccordion === 1} />
         </div>
-        {selectedAccordion === 1 && (
+        {selected && (
           <Row>
-            <Col xl={12} lg={12} md={24} sm={24}>
+            <Col span={12}>
               <div className="accardion-context-box">
                 <h4>Ad</h4>
                 <Input
@@ -111,7 +112,7 @@ const FirstHelp = () => {
                 </div>
               </div>
             </Col>
-            <Col  xl={24} lg={24} md={24} sm={24}>
+            <Col xl={24} lg={24} md={24} sm={24}>
               <div className="mention">
                 <h4>Qeyd</h4>
                 <Input
@@ -124,38 +125,39 @@ const FirstHelp = () => {
             </Col>
           </Row>
         )}
-        <div className="first-blog" onClick={() => toggleAccordion(2)}>
+        <div className="first-blog">
           <div className="first-box">
-            <Checkbox checked={selectedAccordion === 2}></Checkbox>
+            <Checkbox
+              onChange={handleSelected}
+              disabled={noSelected ? true : false}
+            ></Checkbox>
             <span>Ilk tibbi yardim</span>
           </div>
           <BsArrowReturnLeft />
-          <FaAngleRight className={selectedAccordion === 2 ? "open" : ""} />
         </div>
-        <div className="first-blog" onClick={() => toggleAccordion(3)}>
+        <div className="first-blog">
           <div className="first-box">
-            <Checkbox checked={selectedAccordion === 3}></Checkbox>
+            <Checkbox
+              onChange={handleNoSelected}
+              disabled={selected ? true : false}
+            ></Checkbox>
             <span>Mudaxile olunmadi</span>
           </div>
           <BsArrowReturnLeft />
-          <FaAngleRight className={selectedAccordion === 3 ? "open" : ""} />
         </div>
-        {selectedAccordion === 3 && (
+        {noSelected && (
           <Row>
-            <Col xl={12} lg={12} md={24} sm={24}>
+            <Col span={12}>
               <div className="accardion-context-box">
-                <h4>Qerar verenin adi</h4>
+                <h4>Ad</h4>
                 <Input
-                  placeholder="Daxil edin"
+                  placeholder="Ad"
                   onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.qerarVerenAdi}
-                  name="qerarVerenAdi"
+                  value={formik.values.ad}
                 />
-                {formik.errors.qerarVerenAdi &&
-                  formik.touched.qerarVerenAdi && (
-                    <div className="error">{formik.errors.qerarVerenAdi}</div>
-                  )}
+                {formik.errors.ad && formik.touched.ad && (
+                  <div className="error">{formik.errors.ad}</div>
+                )}
               </div>
             </Col>
             <Col xl={12} lg={12} md={24} sm={24}>
@@ -167,14 +169,14 @@ const FirstHelp = () => {
                       className="dateType"
                       placeholder="Baslama tarix"
                       onChange={(date) =>
-                        formik.setFieldValue("hadiseTarixi", date)
+                        formik.setFieldValue("baslamaTarixi", date)
                       }
-                      value={formik.values.hadiseTarixi}
+                      value={formik.values.baslamaTarixi}
                     />
-                    {formik.errors.hadiseTarixi &&
-                      formik.touched.hadiseTarixi && (
+                    {formik.errors.baslamaTarixi &&
+                      formik.touched.baslamaTarixi && (
                         <div className="error">
-                          {formik.errors.hadiseTarixi}
+                          {formik.errors.baslamaTarixi}
                         </div>
                       )}
                   </Space>
@@ -186,36 +188,15 @@ const FirstHelp = () => {
                 </div>
               </div>
             </Col>
-            <Col xl={12} lg={12} md={24} sm={24}>
-              <div className="mention">
-                <h4>Vezifesi</h4>
-                <Input
-                  className="mention-input"
-                  placeholder="Daxil edin"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.vezifesi}
-                  name="vezifesi"
-                />
-                {formik.errors.vezifesi && formik.touched.vezifesi && (
-                  <div className="error">{formik.errors.vezifesi}</div>
-                )}
-              </div>
-            </Col>
-            <Col xl={12} lg={12} md={24} sm={24}>
+            <Col xl={24} lg={24} md={24} sm={24}>
               <div className="mention">
                 <h4>Qeyd</h4>
                 <Input
                   className="mention-input"
                   placeholder="Daxil edin"
                   onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
                   value={formik.values.qeyd}
-                  name="qeyd"
                 />
-                {formik.errors.qeyd && formik.touched.qeyd && (
-                  <div className="error">{formik.errors.qeyd}</div>
-                )}
               </div>
             </Col>
           </Row>
@@ -223,11 +204,13 @@ const FirstHelp = () => {
 
         <div className="first-blog">
           <div className="first-box">
-            <Checkbox></Checkbox>
+            <Checkbox
+              onChange={handleSelected}
+              disabled={noSelected ? true : false}
+            ></Checkbox>
             <span>Xestexanaya aparildi</span>
           </div>
           <BsArrowReturnLeft />
-          <FaAngleRight className={selectedAccordion === 3} />
         </div>
       </div>
     </Form>

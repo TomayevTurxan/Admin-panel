@@ -39,7 +39,7 @@ const Menu = () => {
               }
             >
               <FaFire />
-              <span>Qezalar</span>
+              <span>im</span>
             </NavLink>
           </li>
           <li>

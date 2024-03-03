@@ -1,7 +1,7 @@
 import { Col, Row } from "antd";
 import { RiPrinterLine } from "react-icons/ri";
-import Human from "../../../../public/Asset1.png";
 import "./style.scss";
+import Sketlon from "../../../sketlon";
 
 const Detail = () => {
   // Veri dizisi
@@ -44,7 +44,7 @@ const Detail = () => {
           <div className="human-title">
             <h2>Zərərçəkənin anatomiyas</h2>
             <div className="human-img">
-              <img src={Human} />
+                <Sketlon/>
             </div>
           </div>
         </Col>

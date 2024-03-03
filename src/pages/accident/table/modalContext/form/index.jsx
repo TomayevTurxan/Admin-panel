@@ -40,10 +40,11 @@ const FormModal = () => {
       <div className="modalTitle">
         {/* name major */}
         <Row className="info" gutter={5}>
-          <Col  xl={6} lg={6} md={12} sm={12}>
+          <Col xl={6} lg={6} md={12} sm={12}>
             <div className="info-header">
-              <h4>Zererceken sexs</h4>
+              <label htmlFor="zerercekenSexs">Zererceken sexs</label>
               <Select
+                id="zerercekenSexs"
                 className="select"
                 defaultValue="Secim edin"
                 style={{ width: 120 }}
@@ -53,8 +54,9 @@ const FormModal = () => {
           </Col>
           <Col xl={6} lg={6} md={12} sm={12}>
             <div className="info-header">
-              <h4>Vezifesi</h4>
+              <label htmlFor="vezifesi">Vezifesi</label>
               <Select
+                id="vezifesi"
                 className="select"
                 defaultValue="Secim edin"
                 style={{ width: 120 }}
@@ -64,8 +66,9 @@ const FormModal = () => {
           </Col>
           <Col xl={6} lg={6} md={12} sm={12}>
             <div className="info-header">
-              <h4>Zererceken sexs</h4>
+              <label htmlFor="zerercekenSexs">Zererceken sexs</label>
               <Input
+                id="zerercekenSexs"
                 className="input"
                 placeholder="Basic usage"
                 name="zerercekenSexs"
@@ -82,8 +85,9 @@ const FormModal = () => {
           </Col>
           <Col xl={6} lg={6} md={12} sm={12}>
             <div className="info-header">
-              <h4>Vezifesi</h4>
+              <label htmlFor="vezifesi">Vezifesi</label>
               <Input
+                id="vezifesi"
                 className="input"
                 placeholder="Basic usage"
                 name="vezifesi"
@@ -102,8 +106,9 @@ const FormModal = () => {
         <Row className="info" gutter={5}>
           <Col xl={6} lg={6} md={12} sm={12}>
             <div className="info-header">
-              <h4>Xesaretin derecesi</h4>
+              <label htmlFor="xesaretinDerecesi">Xesaretin derecesi</label>
               <Select
+                id="xesaretinDerecesi"
                 className="select"
                 defaultValue="Secim edin"
                 style={{ width: 120 }}
@@ -113,8 +118,9 @@ const FormModal = () => {
           </Col>
           <Col xl={6} lg={6} md={12} sm={12}>
             <div className="info-header">
-              <h4>Etraf muhite tesiri</h4>
+              <label htmlFor="etrafMuhiteTesiri">Etraf muhite tesiri</label>
               <Select
+                id="etrafMuhiteTesiri"
                 className="select"
                 defaultValue="Secim edin"
                 style={{ width: 120 }}
@@ -124,8 +130,11 @@ const FormModal = () => {
           </Col>
           <Col xl={6} lg={6} md={12} sm={12}>
             <div className="info-header">
-              <h4>Xesaret hasni vasite ile yetirilib</h4>
+              <label htmlFor="xesaretHasni">
+                Xesaret hasni vasite ile yetirilib
+              </label>
               <Input
+                id="xesaretHasni"
                 className="input"
                 placeholder="Basic usage"
                 name="zerercekenSexs"
@@ -139,8 +148,11 @@ const FormModal = () => {
           </Col>
           <Col xl={6} lg={6} md={12} sm={12}>
             <div className="info-header">
-              <h4>Hadisenin bas verdiyi yer</h4>
+              <label htmlFor="hadiseninBasVerdiyiYer">
+                Hadisenin bas verdiyi yer
+              </label>
               <Input
+                id="hadiseninBasVerdiyiYer"
                 className="input"
                 placeholder="Basic usage"
                 name="vezifesi"
@@ -158,9 +170,16 @@ const FormModal = () => {
         <Row className="info" gutter={5}>
           <Col xl={6} lg={6} md={12} sm={12}>
             <div className="info-header">
-              <h4>Deymis zererin meblegi</h4>
+              <label htmlFor="deymisZererinMeblegi">
+                Deymis zererin meblegi
+              </label>
               <div className="info-title">
-                <Input className="info-input" type="number" placeholder="AZN" />
+                <Input
+                  id="deymisZererinMeblegi"
+                  className="info-input"
+                  type="number"
+                  placeholder="AZN"
+                />
                 <Select
                   className="select"
                   defaultValue="AZN"
@@ -172,8 +191,9 @@ const FormModal = () => {
           </Col>
           <Col xl={6} lg={6} md={12} sm={12}>
             <div className="info-header">
-              <h4>Zedelenmis avadanliq</h4>
+              <label htmlFor="zedelenmisAvadanliq">Zedelenmis avadanliq</label>
               <Input
+                id="zedelenmisAvadanliq"
                 className="info-input"
                 type="number"
                 placeholder="Daxil edin"
@@ -181,11 +201,14 @@ const FormModal = () => {
             </div>
           </Col>
           <Col xl={12} lg={12} md={24} sm={24} className="dateTime">
-            <h4>Aldigi Xesaretden yaranan fasile</h4>
+            <label htmlFor="aldigiXesaretdenYarananFasile">
+              Aldigi Xesaretden yaranan fasile
+            </label>
             <div className="dateTime-head">
               <div className="info-header">
                 <Space direction="vertical">
                   <DatePicker
+                    id="aldigiXesaretdenYarananFasile"
                     className="datePicker"
                     placeholder="Baslama tarix"
                   />
@@ -214,10 +237,11 @@ const FormModal = () => {
 
         {/* accident happen */}
         <Row className="info" gutter={5}>
-          <Col  xl={12} lg={12} md={24} sm={24}>
+          <Col xl={12} lg={12} md={24} sm={24}>
             <div className="info-header">
-              <h4>Xesaretin novu</h4>
+              <label htmlFor="xesaretinNovu">Xesaretin novu</label>
               <Select
+                id="xesaretinNovu"
                 className="selectType"
                 defaultValue="lucy"
                 style={{ width: 120 }}
@@ -232,8 +256,9 @@ const FormModal = () => {
           </Col>
           <Col xl={12} lg={12} md={24} sm={24} className="dateTime">
             <div className="info-header">
-              <h4>Qeyd</h4>
+              <label htmlFor="qeyd">Qeyd</label>
               <Select
+                id="qeyd"
                 className="selectType"
                 defaultValue="lucy"
                 style={{ width: 120 }}
@@ -255,7 +280,7 @@ const FormModal = () => {
         <Row className="info" gutter={5}>
           <Col span={5}>
             <div className="info-header">
-              <h4>Lahiyenin adi</h4>
+              <label>Lahiyenin adi</label>
               <Select
                 className="selectThree"
                 defaultValue="lucy"
@@ -271,7 +296,7 @@ const FormModal = () => {
           </Col>
           <Col span={14} xl={14} lg={14} md={24} sm={24} className="eventTime">
             <div className="info-header">
-              <h4>Hadisenin tarixi ve saati</h4>
+              <label>Hadisenin tarixi ve saati</label>
               <div className="dates">
                 {" "}
                 <Space direction="vertical">
@@ -290,7 +315,7 @@ const FormModal = () => {
           </Col>
           <Col xl={5} lg={12} md={24} sm={24}>
             <div className="info-header">
-              <h4>Zererin sebebleri</h4>
+              <label>Zererin sebebleri</label>
               <Select
                 className="select"
                 defaultValue="Secim edin"

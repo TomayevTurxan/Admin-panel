@@ -32,20 +32,19 @@ const data = [
   },
 ];
 
-const App = () => {
+const App = ({ stateModal,setStateModal }) => {
   const [filteredInfo, setFilteredInfo] = useState({});
   const [sortedInfo, setSortedInfo] = useState({});
-
   //Modal
-  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const showModal = () => {
-    setIsModalOpen(true);
+    setStateModal(true);
   };
   const handleOk = () => {
-    setIsModalOpen(false);
+    setStateModal(false);
   };
   const handleCancel = () => {
-    setIsModalOpen(false);
+    setStateModal(false)
   };
   //emdModal
   //Modal2
@@ -68,11 +67,7 @@ const App = () => {
 
   const columns = [
     {
-      title: (
-        <div className="column-item">
-          Info 
-        </div>
-      ),
+      title: <div className="column-item">Info</div>,
       dataIndex: "info",
       key: "info",
       width: "8%",
@@ -178,16 +173,16 @@ const App = () => {
           };
         }}
       />
+
       <Modal
         width={1100}
         title="Qezalar"
-        open={isModalOpen}
+        open={stateModal}
         onOk={handleOk}
         onCancel={handleCancel}
       >
         <ModalContext />
       </Modal>
-
       <Modal
         width={500}
         title="Filtrle"

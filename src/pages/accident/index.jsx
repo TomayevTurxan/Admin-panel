@@ -1,11 +1,12 @@
 import { VscSettings } from "react-icons/vsc";
 import "./style.scss";
-import { Button } from "antd";
 import { FaPlusCircle } from "react-icons/fa";
 import { Input } from "antd";
 import TableHuman from "./table";
+import { useState } from "react";
 const { Search } = Input;
 const Accident = () => {
+  const [stateModal, setStateModal] = useState(false);
   return (
     <div className="accident">
       <div className="accident-body">
@@ -32,14 +33,19 @@ const Accident = () => {
               <span>Filtrleri temizle</span>
             </button>
           </div>
-          <button className="newButton">
+          <button
+            className="newButton"
+            onClick={() => {
+              setStateModal(!stateModal), console.log("stateModal", stateModal);
+            }}
+          >
             <FaPlusCircle className="new-i" />
-            Yeni
+            Yeniw
           </button>
         </div>
       </div>
       <div className="accident-table">
-        <TableHuman />
+        <TableHuman setStateModal={setStateModal} stateModal={stateModal} />
       </div>
     </div>
   );
