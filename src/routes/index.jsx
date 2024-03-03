@@ -8,7 +8,7 @@ export const ROUTES = [
         element: <UserRoot/>,
         children: [
           {
-            path: "/ControlPanel",
+            path: "/",
             element: <ControlPanel />,
           },
           {

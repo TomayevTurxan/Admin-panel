@@ -1,0 +1,83 @@
+@mixin active-deactive {
+  display: flex;
+  padding: 6px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  border-radius: 6px;
+}
+
+.control-filtr-button {
+  margin-right: 20px;
+  button {
+    display: flex;
+    padding: 6px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 6px;
+    color: white;
+    background: #080305;
+  }
+}
+
+.accident {
+  margin-bottom: 20px;
+  .accident-body {
+    margin-top: 20px;
+    display: flex;
+    padding: 10px 24px 10px 10px;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    .accidents-search {
+      display: flex;
+      width: 70%;
+      .input {
+        width: 40%;
+      }
+      .control-button {
+        display: flex;
+        margin-left: 15px;
+        .aktiv {
+          button {
+            @include active-deactive();
+            border: 2px solid #00de00;
+            background: #fff;
+            color: #00de00;
+          }
+        }
+        .deaktiv {
+            margin-left: 15px;
+          button {
+            @include active-deactive();
+            border-radius: 6px;
+            border: 2px solid #f00;
+            background: #fff;
+            color: #f00;
+            transition: .1s ease-in;
+            &:hover {
+              background-color: #ffe5e5;
+            }
+          }
+        }
+      }
+    }
+    .accidents-button {
+      display: flex;
+      width: 30%;
+      .newButton {
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .new-i {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

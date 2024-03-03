@@ -1,66 +1,17 @@
 import "./style.scss"
 import { IoIosNotificationsOutline } from "react-icons/io";
-import { DownOutlined } from '@ant-design/icons';
-import { CgProfile } from "react-icons/cg";
-import { Col, Dropdown, Row, Space } from 'antd';
-import { IoMdSettings } from "react-icons/io";
-import { IoIosLogOut } from "react-icons/io";
-import { MdOutlineCleaningServices } from "react-icons/md";
+import { Col, Row } from 'antd';
+import { VscSettings } from "react-icons/vsc";
 import Schedule from "./schedule";
 const ControlPanel = () => {
-  const items = [
-    {
-      label: <a href="https://www.antgroup.com"><CgProfile  className="item-i"/>Profile</a>,
-      key: '0',
-    },
-    {
-      label: <a href="https://www.aliyun.com"><IoMdSettings className="item-i" />Settings</a>,
-      key: '1',
-    },
-    {
-      label: <a href="https://www.aliyun.com"><IoIosLogOut  className="item-i"/>Log out</a>,
-      key: '2',
-    },
-    // {
-    //   type: 'divider',
-    // },
-    // {
-    //   label: '3rd menu item',
-    //   key: '3',
-    // },
-  ];
+ 
   return (
     <>
     <div className="controlPanel">
         <div className="control-head">
-            <div className="control-head-title">
-             <div className="control-custom">
-             <span><span className="line">/</span>Idare paneli</span>
-                 <div className="notification">
-                 <IoIosNotificationsOutline  className="notification-i"/>
-                 </div>
-             </div>
-            <div className="control-profile">
-            <Dropdown
-                menu={{
-                  items,
-                }}
-                trigger={['click']}
-              >
-              <a onClick={(e) => e.preventDefault()}>
-                <Space>
-                  <div className="control-profile-notfication">
-                    <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png" alt="" />
-                  <span>Tomayev Turxan</span>
-                  </div>
-                  <DownOutlined />
-                </Space>
-              </a>
-            </Dropdown>
-            </div>
-            </div>
+            
             <div className="control-filtr-button">
-                <button><MdOutlineCleaningServices />Filtrleri temizle</button>
+                <button><VscSettings />Filtrleri temizle</button>
             </div>
             <Row className="news" gutter={6}>
                 <Col span={14} >
@@ -102,8 +53,20 @@ const ControlPanel = () => {
                       <Row>
                         <div className="factors-blog">
                           <div className="factors-box">
-                            <div className="box-color"></div>
+                            <div className="box-color oneBox"></div>
                             <span>Biogoloji</span>
+                          </div>
+                          <div className="factors-box">
+                            <div className="box-color twoBox"></div>
+                            <span>Fiziki</span>
+                          </div>
+                          <div className="factors-box">
+                            <div className="box-color threeBox"></div>
+                            <span>Mexaniki</span>
+                          </div>
+                          <div className="factors-box">
+                            <div className="box-color fourBox"></div>
+                            <span>Insan faktoru</span>
                           </div>
                         </div>
                       </Row>

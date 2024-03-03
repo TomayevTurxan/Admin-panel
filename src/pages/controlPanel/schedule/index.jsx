@@ -1,17 +1,18 @@
 import { useEffect } from 'react';
 import Chart from 'chart.js/auto';
-import "./style.scss"
+import "./style.scss";
+
 const Schedule = () => {
   const DATA_COUNT = 7;
-  const NUMBER_CFG = { count: DATA_COUNT, min: -100, max: 100 };
-  const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July']; // Utils.months() yerine elle etiketleri ekledik
+  const NUMBER_CFG = { count: DATA_COUNT, min: 0, max: 100 }; // Min değeri sıfır olarak ayarladık
+  const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
   const data = {
     labels: labels,
     datasets: [
       {
         label: 'Dataset 1',
         data: Array.from({ length: DATA_COUNT }, () => Math.floor(Math.random() * (NUMBER_CFG.max - NUMBER_CFG.min + 1)) + NUMBER_CFG.min),
-        backgroundColor: '#6952e0', 
+        backgroundColor: '#6952e0',
         borderColor: 'rgba(255, 99, 132, 1)',
         borderWidth: 1,
       },
@@ -25,14 +26,14 @@ const Schedule = () => {
       {
         label: 'Dataset 3',
         data: Array.from({ length: DATA_COUNT }, () => Math.floor(Math.random() * (NUMBER_CFG.max - NUMBER_CFG.min + 1)) + NUMBER_CFG.min),
-        backgroundColor: '#68d8ee', 
+        backgroundColor: '#68d8ee',
         borderColor: '#258cf4',
         borderWidth: 1,
       },
       {
         label: 'Dataset 4',
         data: Array.from({ length: DATA_COUNT }, () => Math.floor(Math.random() * (NUMBER_CFG.max - NUMBER_CFG.min + 1)) + NUMBER_CFG.min),
-        backgroundColor: '#258cf4', 
+        backgroundColor: '#258cf4',
         borderColor: '#258cf4',
         borderWidth: 1,
       },
@@ -56,17 +57,19 @@ const Schedule = () => {
         },
         y: {
           stacked: true,
+          beginAtZero: true,
         },
       },
+      barThickness: 20, 
     },
   };
+  
 
   useEffect(() => {
     const chart = new Chart(document.getElementById('myChart'), config);
-    return () => chart.destroy(); 
-  }, []); 
+    return () => chart.destroy();
+  }, []);
 
- 
   return (
     <div>
       <canvas id="myChart" width="400" height="400"></canvas>

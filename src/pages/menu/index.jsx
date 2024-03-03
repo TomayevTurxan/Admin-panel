@@ -18,7 +18,7 @@ const Menu = () => {
             <h1>Setem</h1>
         </div>
         <div className="controlPanel">
-            <Link to="ControlPanel">
+            <Link to="/">
             <Button ><VscSettings /><span>Idare Paneli</span></Button>
             </Link>
         </div>

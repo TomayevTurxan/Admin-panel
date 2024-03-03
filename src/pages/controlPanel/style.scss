@@ -20,6 +20,12 @@
   background-color: white;
   padding: 20px 10px;
 }
+@mixin box-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+}
+
 $base-color: #5c6370;
 //schedule colors
 $human-factor: #6952e0;
@@ -27,56 +33,7 @@ $mechanic-factor: #00de00;
 $physics-factor: #68d8ee;
 $biology-factor: #258cf4;
 
-//controlPanel for input
-.controlPanel {
-  .control-head {
-    width: 100%;
-    .control-head-title {
-      width: 100%;
-      display: flex;
-      background-color: white;
-      padding: 15px 15px;
-      .control-custom {
-        display: flex;
-        position: relative;
-        justify-content: space-between;
-        width: 70%;
-        span {
-          display: flex;
-          align-items: center;
-          margin-left: 20px;
-          color: #909090;
-          width: 15%;
-          .line {
-            margin-left: -15px;
-            font-size: 16px;
-            position: absolute;
-            color: #909090;
-          }
-        }
-        .notification {
-          @include center;
-          .notification-i {
-            font-size: 25px;
-          }
-        }
-      }
-      .control-profile {
-        width: 30%;
-        display: flex;
-        .control-profile-notfication {
-          @include center;
-          width: 100%;
-          img {
-            width: 10%;
-            height: 100%;
-            margin-right: 10px;
-          }
-        }
-      }
-    }
-  }
-}
+
 
 //controlPanel Filtre Buttom
 .controlPanel {
@@ -272,15 +229,39 @@ $biology-factor: #258cf4;
   .control-head {
     .news-characteristics {
       @include head-style();
-      margin-bottom: 200px;
       h1 {
         @include line();
         padding-bottom: 20px;
       }
-      .factors-blog{
-        .factors-box{
-          .box-color{
-            
+      .factors-blog {
+        display: flex;
+        margin-top: 20px;
+        .factors-box {
+          display: flex;
+          align-items: center;
+          margin-right: 20px;
+          span {
+            margin-left: 15px;
+          }
+          .oneBox {
+            @include box-color();
+            background: $biology-factor;
+          }
+          .twoBox {
+            @include box-color();
+            background: $physics-factor;
+          }
+          .twoBox {
+            @include box-color();
+            background: $physics-factor;
+          }
+          .threeBox {
+            @include box-color();
+            background: $mechanic-factor;
+          }
+          .fourBox {
+            @include box-color();
+            background: $human-factor;
           }
         }
       }

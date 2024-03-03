@@ -1,0 +1,42 @@
+.first-step {
+  .first-blog {
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    padding: 12px 24px 12px 16px;
+    align-items: center;
+    background: #fcfcfc;
+    margin: 20px 0px;
+    .first-box {
+      display: flex;
+      width: 100%;
+      background-color: #fcfcfc;
+      span {
+        margin-right: 10px;
+        color: #080305;
+        font-size: 18px;
+      }
+    }
+  }
+  .accardion-context-box {
+    display: flex;
+    flex-direction: column;
+    h4 {
+      text-align: start;
+      margin-bottom: 10px;
+    }
+    .dates {
+      display: flex;
+      .dateType {
+        width: 400px;
+      }
+    }
+  }
+  .mention {
+    margin: 20px 0px;
+    h4 {
+      text-align: start;
+    }
+  }
+}
+// burda ancaq ilk yardim ile mudaxile olunmayana clikc oldugu teqdirde acilsin accardion digeri ise acilmasin ve heresinin ayrica contenti olacaq yazilan content yalniz ilk yardima aiddi ona uygun codu duzelt

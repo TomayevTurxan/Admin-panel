@@ -1,0 +1,70 @@
+@mixin add-button {
+  width: 20%;
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .add-i {
+      margin-right: 10px;
+    }
+  }
+}
+
+.research {
+  .info-header {
+    display: flex;
+    flex-direction: column;
+    h4 {
+      width: 100%;
+      text-align: start;
+      margin-bottom: 10px;
+    }
+    .select {
+      width: 500px !important;
+    }
+    .selectType {
+      width: 500px !important;
+    }
+    .info-title {
+      display: flex;
+      .select {
+        width: 40% !important;
+        border-left: none;
+      }
+    }
+    .info-input {
+      width: 89%;
+    }
+    .selectThree {
+      width: 180px !important;
+    }
+    .dates {
+      display: flex;
+      justify-content: space-between;
+      .dateType {
+        width: 360px;
+      }
+      .clock {
+        width: 40%;
+      }
+    }
+  }
+  .addButton {
+    margin: 30px auto;
+  }
+  .add-item{
+    margin: 15px 0px;
+    text-align: start;
+  }
+}
+
+:where(
+    .css-dev-only-do-not-override-1k979oh
+  ).ant-select-single.ant-select-show-arrow
+  .ant-select-selection-item,
+:where(
+    .css-dev-only-do-not-override-1k979oh
+  ).ant-select-single.ant-select-show-arrow
+  .ant-select-selection-placeholder {
+  display: flex;
+}
