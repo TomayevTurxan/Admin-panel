@@ -1,17 +1,18 @@
-*{
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Montserrat;
+  font-family: "Montserrat";
 }
-a{
+a {
   text-decoration: none;
   list-style: none;
 }
-li{
+li {
   text-decoration: none;
   list-style: none;
 }
-body{
-  background: #F8F8F8;
+body {
+  background: #f8f8f8;
 }

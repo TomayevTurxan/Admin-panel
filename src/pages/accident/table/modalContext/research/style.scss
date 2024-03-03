@@ -33,7 +33,7 @@
       }
     }
     .info-input {
-      width: 89%;
+      width: 90%;
     }
     .selectThree {
       width: 180px !important;
@@ -67,4 +67,28 @@
   ).ant-select-single.ant-select-show-arrow
   .ant-select-selection-placeholder {
   display: flex;
+}
+
+@media (max-width: 576px) {  
+
+}
+
+@media (max-width: 767px) { 
+    .research{
+      .info-header{
+        .select{
+          max-width: 250px!important;
+        }
+      }
+    }
+ }
+ 
+@media (max-width: 972px) { 
+  .research{
+    .info-header{
+      .select{
+        max-width: 250px!important;
+      }
+    }
+  }
 }

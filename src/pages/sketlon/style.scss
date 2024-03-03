@@ -1,0 +1,7 @@
+path {
+  transition: 0.1s ease-in;
+  &:hover {
+    transition: 0.1s ease-in;
+    fill: rgb(235, 28, 28);
+  }
+}

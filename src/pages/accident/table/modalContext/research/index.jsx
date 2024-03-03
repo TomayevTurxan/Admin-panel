@@ -12,6 +12,7 @@ import "./style.scss";
 import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
 import { FaCirclePlus } from "react-icons/fa6";
+import TextArea from "antd/es/input/TextArea";
 const Research = () => {
   dayjs.extend(customParseFormat);
   const onChange = (time, timeString) => {
@@ -24,7 +25,7 @@ const Research = () => {
           marginBottom: "20px",
         }}
       >
-        <Col span={6}>
+        <Col  xl={6} lg={6} md={12} sm={12}>
           <div className="info-header">
             <h4>Zererin sebebleri</h4>
             <Select
@@ -35,7 +36,7 @@ const Research = () => {
             />
           </div>
         </Col>
-        <Col span={6}>
+        <Col xl={6} lg={6} md={12} sm={12}>
           <div className="info-header">
             <h4>Seher</h4>
             <Select
@@ -46,7 +47,7 @@ const Research = () => {
             />
           </div>
         </Col>
-        <Col col={12}>
+        <Col  xl={12} lg={12} md={24} sm={24}>
           <div className="info-header">
             <h4>Hadisenin tarixi ve saati</h4>
             <div className="dates">
@@ -69,7 +70,7 @@ const Research = () => {
           marginBottom: "20px",
         }}
       >
-        <Col span={6}>
+        <Col  xl={6} lg={6} md={12} sm={12}>
           <div className="info-header">
             <h4>Elaqe nomresi</h4>
             <div className="info-title">
@@ -93,7 +94,7 @@ const Research = () => {
             </div>
           </div>
         </Col>
-        <Col span={6}>
+        <Col xl={6} lg={6} md={12} sm={12}>
           <div className="info-header">
             <h4>Emakdasin adi</h4>
             <Input
@@ -103,7 +104,7 @@ const Research = () => {
             />
           </div>
         </Col>
-        <Col col={12}>
+        <Col  xl={12} lg={12} md={24} sm={24}>
           <div className="info-header">
             <h4>Elaqeli fayllar</h4>
             <Input className="info-input" type="file" placeholder="399-99-99" />
@@ -123,7 +124,7 @@ const Research = () => {
 
       {/* hadisenin sahidleri */}
       <Row className="info" gutter={5}>
-        <Col span={12}>
+        <Col xl={12} lg={12} md={24} sm={24}>
           <div className="info-header">
             <h4>Hadisenin sahidleri</h4>
             <Select
@@ -134,7 +135,7 @@ const Research = () => {
             />
           </div>
         </Col>
-        <Col span={12} className="info-header">
+        <Col xl={12} lg={12} md={24} sm={24} className="info-header">
           <h4>Hadisenin sahidleri</h4>
           <Input
             className="info-input"
@@ -150,8 +151,9 @@ const Research = () => {
         </Col>
       </Row>
 
+      {/* hadisenin sebebi */}
       <Row className="info" gutter={5}>
-        <Col span={12}>
+        <Col xl={12} lg={12} md={24} sm={24}>
           <div className="info-header">
             <h4>Hadisenin sahidleri</h4>
             <Select
@@ -162,21 +164,89 @@ const Research = () => {
             />
           </div>
         </Col>
-        <Col span={12} className="info-header">
+        <Col sxl={12} lg={12} md={24} sm={24} className="info-header">
           <h4>Hadisenin sahidleri</h4>
-          <Input
-            className="info-input"
-            type="number"
-            placeholder="Daxil edin"
+          <Select
+            className="select"
+            defaultValue="Secim edin"
+            style={{ width: 120 }}
+            options={[{ value: "lucy", label: "Lucy" }]}
           />
-          <div className="addButton add-item">
-            <Button type="primary" ghost>
-              <FaCirclePlus className="add-i" />
-              <span>Elave et</span>
-            </Button>
+        </Col>
+      </Row>
+
+      {/* hadisenin ilkin arasdirilmasi ve tam arasdirilamasi */}
+      <Row className="info" gutter={5} style={{ marginTop: "20px" }}>
+        <Col xl={12} lg={12} md={24} sm={24}>
+          <div className="info-header">
+            <h4>Hadisenin ilkin arasdirilmasi</h4>
+            <TextArea rows={4} placeholder="Daxil edin" />
+          </div>
+        </Col>
+        <Col xl={12} lg={12} md={24} sm={24} className="info-header">
+          <h4>Hadisenin tam arasdirilmasi</h4>
+          <TextArea rows={4} placeholder="Daxil edin" />
+        </Col>
+      </Row>
+
+      <div className="line"></div>
+
+      {/* File uploads */}
+      <Row className="info" gutter={5} style={{ marginTop: "20px" }}>
+        <Col xl={12} lg={12} md={24} sm={24}>
+          <div className="info-header">
+            <h4>Sekil tesviri</h4>
+            <Input className="info-input" type="file" />
+          </div>
+        </Col>
+        <Col xl={12} lg={12} md={24} sm={24} className="info-header">
+          <h4>Video tesviri</h4>
+          <Input className="info-input" type="file" />
+        </Col>
+      </Row>
+
+      <Row className="info" gutter={5} style={{ marginTop: "20px" }}>
+        <Col xl={12} lg={12} md={24} sm={24} className="info-header">
+          <h4>Risk</h4>
+          <Input className="info-input" type="file" />
+        </Col>
+        <Col xl={12} lg={12} md={24} sm={24} className="info-header">
+          <h4>Telimatlandirma</h4>
+          <Input className="info-input" type="file" />
+        </Col>
+      </Row>
+
+      {/* Gorulecek tedbirler         */}
+
+      <Row className="info" gutter={5} style={{ marginTop: "20px" }}>
+        <Col xl={12} lg={12} md={24} sm={24}>
+          <div className="info-header">
+            <h4>Gorulecek tedbirler</h4>
+            <TextArea rows={4} placeholder="Daxil edin" />
+          </div>
+        </Col>
+        <Col xl={12} lg={12} md={24} sm={24} className="info-header">
+          <h4>Hadise ile elaqeder intizam tedbirleri</h4>
+          <TextArea rows={4} placeholder="Daxil edin" />
+        </Col>
+      </Row>
+
+      {/* e qanun site */}
+      <Row className="info" gutter={5} style={{ marginTop: "20px" }}>
+        <Col span={24} >
+          <div className="info-header">
+            <h4>Gorulecek tedbirler</h4>
+            <Input type="text" placeholder="Dacil edin" />
+            <div className="addButton">
+              <Button type="primary" ghost>
+                <FaCirclePlus className="add-i" />
+                <span>Elave et</span>
+              </Button>
+            </div>
           </div>
         </Col>
       </Row>
+      <div className="line" style={{marginBottom:"15px"}}></div>
     </div>
   );
 };

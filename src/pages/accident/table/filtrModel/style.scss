@@ -1,0 +1,19 @@
+.filtrModal {
+  .filtr-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    ul {
+      li {
+        margin: 10px 0px;
+        span {
+          margin-right: 5px;
+          font-size: 16px;
+          font-weight: 500;
+          color: #080305;
+        }
+      }
+    }
+  }
+}

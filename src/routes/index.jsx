@@ -1,5 +1,6 @@
 import UserRoot from "../UserRoot";
 import Accident from "../pages/accident";
+import Detail from "../pages/accident/table/detail";
 import ControlPanel from "../pages/controlPanel";
 
 export const ROUTES = [
@@ -14,6 +15,10 @@ export const ROUTES = [
           {
             path: "/accident",
             element: <Accident />,
+          },
+          {
+            path: "/detail",
+            element: <Detail />,
           },
         ],
       },

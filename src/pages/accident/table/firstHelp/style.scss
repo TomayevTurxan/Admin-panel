@@ -39,4 +39,39 @@
     }
   }
 }
-// burda ancaq ilk yardim ile mudaxile olunmayana clikc oldugu teqdirde acilsin accardion digeri ise acilmasin ve heresinin ayrica contenti olacaq yazilan content yalniz ilk yardima aiddi ona uygun codu duzelt
+
+@media (max-width: 476px) { 
+  .modal{
+    .modalTitle{
+      .info{
+        display: flex!important;
+        .info-header{
+          .selectType{
+            width: 400px!important;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) { 
+  .modal{
+    .modalTitle{
+      .info{
+        display: flex;
+        flex-direction: column;
+        .dateType{
+          max-width: 400px;
+        }
+        .info-header{
+          .selectType{
+            width: 400px!important;
+          }
+        }
+      }
+      .dateTime-head{
+        display: flex;
+      }
+    }
+  }
+}

@@ -40,7 +40,7 @@ const FormModal = () => {
       <div className="modalTitle">
         {/* name major */}
         <Row className="info" gutter={5}>
-          <Col span={6}>
+          <Col  xl={6} lg={6} md={12} sm={12}>
             <div className="info-header">
               <h4>Zererceken sexs</h4>
               <Select
@@ -51,7 +51,7 @@ const FormModal = () => {
               />
             </div>
           </Col>
-          <Col span={6}>
+          <Col xl={6} lg={6} md={12} sm={12}>
             <div className="info-header">
               <h4>Vezifesi</h4>
               <Select
@@ -62,7 +62,7 @@ const FormModal = () => {
               />
             </div>
           </Col>
-          <Col span={6}>
+          <Col xl={6} lg={6} md={12} sm={12}>
             <div className="info-header">
               <h4>Zererceken sexs</h4>
               <Input
@@ -80,7 +80,7 @@ const FormModal = () => {
               Zerer ceken sexs kenar sexsdir
             </Checkbox>
           </Col>
-          <Col span={6}>
+          <Col xl={6} lg={6} md={12} sm={12}>
             <div className="info-header">
               <h4>Vezifesi</h4>
               <Input
@@ -100,7 +100,7 @@ const FormModal = () => {
 
         {/* happen events input */}
         <Row className="info" gutter={5}>
-          <Col span={6}>
+          <Col xl={6} lg={6} md={12} sm={12}>
             <div className="info-header">
               <h4>Xesaretin derecesi</h4>
               <Select
@@ -111,7 +111,7 @@ const FormModal = () => {
               />
             </div>
           </Col>
-          <Col span={6}>
+          <Col xl={6} lg={6} md={12} sm={12}>
             <div className="info-header">
               <h4>Etraf muhite tesiri</h4>
               <Select
@@ -122,7 +122,7 @@ const FormModal = () => {
               />
             </div>
           </Col>
-          <Col span={6}>
+          <Col xl={6} lg={6} md={12} sm={12}>
             <div className="info-header">
               <h4>Xesaret hasni vasite ile yetirilib</h4>
               <Input
@@ -137,7 +137,7 @@ const FormModal = () => {
               ) : null}
             </div>
           </Col>
-          <Col span={6}>
+          <Col xl={6} lg={6} md={12} sm={12}>
             <div className="info-header">
               <h4>Hadisenin bas verdiyi yer</h4>
               <Input
@@ -156,7 +156,7 @@ const FormModal = () => {
 
         {/* Date time */}
         <Row className="info" gutter={5}>
-          <Col span={6}>
+          <Col xl={6} lg={6} md={12} sm={12}>
             <div className="info-header">
               <h4>Deymis zererin meblegi</h4>
               <div className="info-title">
@@ -170,7 +170,7 @@ const FormModal = () => {
               </div>
             </div>
           </Col>
-          <Col span={6}>
+          <Col xl={6} lg={6} md={12} sm={12}>
             <div className="info-header">
               <h4>Zedelenmis avadanliq</h4>
               <Input
@@ -180,7 +180,7 @@ const FormModal = () => {
               />
             </div>
           </Col>
-          <Col span={12} className="dateTime">
+          <Col xl={12} lg={12} md={24} sm={24} className="dateTime">
             <h4>Aldigi Xesaretden yaranan fasile</h4>
             <div className="dateTime-head">
               <div className="info-header">
@@ -214,7 +214,7 @@ const FormModal = () => {
 
         {/* accident happen */}
         <Row className="info" gutter={5}>
-          <Col span={12}>
+          <Col  xl={12} lg={12} md={24} sm={24}>
             <div className="info-header">
               <h4>Xesaretin novu</h4>
               <Select
@@ -230,7 +230,7 @@ const FormModal = () => {
               />
             </div>
           </Col>
-          <Col span={12} className="dateTime">
+          <Col xl={12} lg={12} md={24} sm={24} className="dateTime">
             <div className="info-header">
               <h4>Qeyd</h4>
               <Select
@@ -269,7 +269,7 @@ const FormModal = () => {
               />
             </div>
           </Col>
-          <Col span={14} className="eventTime">
+          <Col span={14} xl={14} lg={14} md={24} sm={24} className="eventTime">
             <div className="info-header">
               <h4>Hadisenin tarixi ve saati</h4>
               <div className="dates">
@@ -288,7 +288,7 @@ const FormModal = () => {
               </div>
             </div>
           </Col>
-          <Col span={5}>
+          <Col xl={5} lg={12} md={24} sm={24}>
             <div className="info-header">
               <h4>Zererin sebebleri</h4>
               <Select

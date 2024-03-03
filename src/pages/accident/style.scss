@@ -27,14 +27,14 @@
   .accident-body {
     margin-top: 20px;
     display: flex;
-    padding: 10px 24px 10px 10px;
-    justify-content: flex-end;
+    padding: 20px;
+    justify-content: space-between;
     align-items: center;
     background-color: white;
     width: 100%;
     .accidents-search {
       display: flex;
-      width: 70%;
+      width: 60%;
       .input {
         width: 40%;
       }
@@ -50,14 +50,14 @@
           }
         }
         .deaktiv {
-            margin-left: 15px;
+          margin-left: 15px;
           button {
             @include active-deactive();
             border-radius: 6px;
             border: 2px solid #f00;
             background: #fff;
             color: #f00;
-            transition: .1s ease-in;
+            transition: 0.1s ease-in;
             &:hover {
               background-color: #ffe5e5;
             }
@@ -67,17 +67,97 @@
     }
     .accidents-button {
       display: flex;
-      width: 30%;
-      .newButton {
+      width: 40%;
+      justify-content: flex-end ;
+      .control-filtr-button {
         button {
           display: flex;
-          align-items: center;
+          padding: 6px 24px;
           justify-content: center;
+          align-items: center;
+          gap: 8px;
+          border-radius: 6px;
+          background: #080305;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span {
+            color: #fff;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 175%;
+          }
         }
+      }
+      .newButton {
+        display: flex;
+        padding: 6px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 8px;
+        background: #23a4dd;
+        border: none;
+        color: white;
         .new-i {
           margin-right: 10px;
         }
       }
     }
+  }
+  .accident-table {
+    background-color: white;
+    padding: 10px;
+  }
+}
+
+
+@media (max-width: 576px) {  
+  .accident{
+    .accident-body{
+      display: flex;
+      flex-direction: column;
+      .accidents-button{
+        width: 100%!important;
+        margin-top: 20px;
+      }
+    }
+  }
+  .accident-table {
+    overflow: scroll !important;
+  }
+}
+
+@media (max-width: 767px) { 
+  .accident{
+    .accident-body{
+      display: flex;
+      flex-direction: column;
+      .accidents-button{
+        width: 100%!important;
+        margin-top: 20px;
+      }
+    }
+  }
+  .accident-table {
+   overflow: scroll!important;
+  }
+ }
+ 
+@media (max-width: 972px) { 
+  .accident{
+    .accident-body{
+      display: flex;
+      flex-direction: column;
+      .accidents-button{
+        width: 100%!important;
+        margin-top: 20px;
+      }
+    }
+  }
+  .accident-table {
+   overflow: scroll!important;
   }
 }

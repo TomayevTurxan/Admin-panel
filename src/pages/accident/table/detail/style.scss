@@ -1,0 +1,47 @@
+.detail {
+  margin-top: 30px;
+  .detail-head {
+    background-color: white;
+    padding: 20px 20px;
+    .detail-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h2 {
+        font-size: 18px;
+      }
+      .detail-head-i {
+        font-size: 20px;
+      }
+    }
+    .detail-schedule {
+      margin: 20px 0px;
+      ul {
+        li {
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 6px;
+          margin: 20px 0px;
+          border-bottom: 1px solid rgba(8, 3, 3, 0.1);
+          span {
+            color: #080305;
+          }
+        }
+      }
+    }
+  }
+  .human-title {
+    background-color: white;
+    padding: 20px 20px;
+    h2 {
+      font-size: 18px;
+      margin-bottom: 50px;
+    }
+    .human-img {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
