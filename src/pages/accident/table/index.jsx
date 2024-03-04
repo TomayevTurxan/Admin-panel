@@ -5,6 +5,8 @@ import ModalContext from "./modalContext";
 import { AiOutlineFilter } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import FiltrModal from "./filtrModel";
+
+//  TURXAN TOMAYEV
 const data = [
   {
     key: "1",
